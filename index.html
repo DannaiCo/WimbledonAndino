@@ -143,7 +143,8 @@
         }
 
         let partidos = data.partidos;
-        let index = 0;
+        // 👉 Iniciar en un índice aleatorio
+        let index = Math.floor(Math.random() * partidos.length);
 
         function mostrarPartido(i) {
           const p = partidos[i];
@@ -160,11 +161,12 @@
         setInterval(() => {
           index = (index + 1) % partidos.length;
           mostrarPartido(index);
-        }, 15000);
+        }, 5000); // 👉 Cambio cada 5 segundos
       });
   </script>
 </body>
 </html>
+
 
 
 
